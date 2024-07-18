@@ -1,16 +1,14 @@
-The paper introduces the Transformer, a novel neural network architecture that relies entirely on attention mechanisms, dispensing with recurrence and convolutions 
-entirely. This approach improves the performance and training efficiency of models used for sequence transduction tasks, such as machine translation. The Transformer 
-achieves superior results in terms of quality and training speed on benchmark translation tasks, such as WMT 2014 English-to-German and English-to-French.
+The paper introduces the Transformer model, a new neural network architecture that relies entirely on attention mechanisms, making with recurrence and convolutions 
+mechanisms unrequired. This approach significantly improves the performance and training efficiency of models used for sequence transduction tasks, such as machine translation. One example where the Transformer achieves superior results in terms of quality and training speed is on benchmark translation tasks.
 
-Traditional sequence transduction models use recurrent neural networks (RNNs) or convolutional neural networks (CNNs). These models, while effective, have limitations, 
-especially concerning parallelization and handling long-range dependencies efficiently. Attention mechanisms have been integrated into these models to address some 
-limitations, but the Transformer goes further by using attention mechanisms exclusively.
+Traditional sequence transduction models use recurrent neural networks (RNNs) or convolutional neural networks (CNNs) which are effective, but have some limitations, 
+like especially concerning parallelization and handling long-range dependencies efficiently. Attention mechanisms have been integrated into these models to address some 
+limitations, but the Transformer goes further by using attention mechanisms exclusively. This approach handles the parallelization and temporal dependencies expertly. 
 
 Model Architecture:
-Encoder-Decoder Structure: The Transformer follows an encoder-decoder architecture where both components use stacked self-attention and point-wise, fully connected 
-layers.
+The Transformer follows an encoder-decoder architecture where both components use stacked self-attention and point-wise, fully connected layers:
 Encoder: Composed of six identical layers, each with two sub-layers: multi-head self-attention and a feed-forward network.
-Decoder: Also consists of six identical layers but includes an additional sub-layer for multi-head attention over the encoder's output. The decoder uses masking to 
+Decoder: Composed of six identical layers but includes an additional sub-layer for multi-head attention over the encoder's output. it uses masking to 
 prevent attending to future positions.
 
 Attention Mechanisms:
@@ -19,12 +17,18 @@ Multi-Head Attention: Projects queries, keys, and values into multiple subspaces
 different subspaces jointly.
 
 Positional Encoding:
-Since the Transformer lacks recurrence and convolution, positional encodings are added to the input embeddings to incorporate sequence order information. These encodings 
+Since the Transformer lacks recurrence and convolution, positional encodings are added to the input embeddings to incorporate sequence order information. 
+These encodings 
 use sine and cosine functions of different frequencies.
 
-Advantages:
-Parallelization: The lack of sequential dependencies in the Transformer allows for more parallelization during training, significantly reducing training times.
-Long-Range Dependencies: The self-attention mechanism enables the model to capture long-range dependencies more effectively than RNNs or CNNs.
+Advantages of self-attention layers:
+1. self-attention layers are faster than recurrent layers when the sequence length is smaller than the representation dimensionality.
+2. self-attention could yield more interpretable models as the individual attention heads learn to perform different tasks, and also exhibit behavior related to the syntactic and semantic structure of the sentences.
+
+
+Advantages of transformer model:
+1. Parallelization: The lack of sequential dependencies in the Transformer allows for more parallelization during training, significantly reducing training times.
+2. Long-Range Dependencies: The self-attention mechanism enables the model to capture long-range dependencies more effectively than RNNs or CNNs, which makes it close to LSTM.
 
 The Transformer outperforms previous state-of-the-art models on the WMT 2014 English-to-German and English-to-French translation tasks. It achieves higher BLEU scores 
 while requiring less training time and computational resources.
@@ -32,3 +36,5 @@ while requiring less training time and computational resources.
 The Transformer represents a significant advancement in neural network architectures for sequence transduction tasks. By relying solely on attention mechanisms, 
 it overcomes many limitations of RNNs and CNNs, offering better performance and efficiency. The architecture has broad applicability beyond machine translation, 
 as demonstrated by its successful application to other tasks like English constituency parsing.
+
+In conclusion, the attention based transformer model is an upgrade to previous tecnologies and the future of the tasks which involve transforming and input layer to a desirable format.
