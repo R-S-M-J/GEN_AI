@@ -1,0 +1,11 @@
+SrNo,Patient_Id,DOB,Fever,Cough,Cold,Other Symptoms
+1,COVID1,11-05-85,High,Low,High,Body Ache
+2,COVID2,12-05-47,Mid,Low,Mid,Shivering
+3,COVID3,13-05-99,Low,Mid,Low,Head Ache
+4,COVID4,14-05-85,High,High,Low,Nausia
+5,COVID5,15-05-84,Mid,Mid,High,Sickness
+6,COVID6,16-05-01,High,Low,Low,Vertigo
+7,COVID7,17-05-07,Mid,Low,Mid,Head Ache
+8,COVID8,18-05-81,Low,Mid,High,Nausia
+9,COVID9,19-05-95,Mid,High,High,Sickness
+10,COVID10,20-05-85,Low,Low,Low,"Vertigo, Nausia"
